@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:onboarding_sample_db;MODE=MYSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+        show_sql: true
+  output:
+    ansi:
+      enabled: always
+
+server:
+  port: 8001
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.hibernate: INFO
